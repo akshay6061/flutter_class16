@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class16/view/widgets/datas.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -17,7 +18,7 @@ class CartPage extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 760,
-          color: Colors.brown,
+          color: const Color.fromARGB(255, 156, 151, 151),
           child: ListView.builder(
             itemCount: 5,
             itemBuilder: (context, index) => 
@@ -26,30 +27,31 @@ class CartPage extends StatelessWidget {
           child: Container(
             width: double.infinity,
             height: 200,
-            color: Colors.blue,
+            color: Colors.white,
             child: Row(
               children: [
                 Container(
                   width: 150,
                   height: 200,
-                  color: Colors.green,
+                  color: Colors.white,
+                  child: ImageList[index],
                 ),
                 Container(
                   height: 200,
                   width: 245,
-                  color: Colors.lime,
+                  color: Colors.white,
                   child: Column(
                     children: [
                       Container(
                         width: 245,
                         height: 50,
-                        color: Colors.red,
+                        color: Colors.white,
                         child: Text("Regular Fit Polo \n PKR-170",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
                       ),
                       Container(
                         width: 245,
                         height: 30,
-                        color: Colors.blueAccent,
+                        color: Colors.white,
                         child: Row(
                             children: [
                               Icon(Icons.star),
@@ -60,8 +62,8 @@ class CartPage extends StatelessWidget {
                       Container(
                         width: 245,
                         height: 50,
-                        color: Colors.pink,
-                        child: Text(""),
+                        color: Colors.white,
+                        child: Text("Item Count = 0",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.black),),
                       )
                     ],
                   ),
